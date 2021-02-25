@@ -93,7 +93,6 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="insetGrouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="qEQ-L1-3p4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <connections>
                             <outlet property="dataSource" destination="rho-5I-Wv8" id="Bdy-O0-12t"/>
                             <outlet property="delegate" destination="rho-5I-Wv8" id="GpN-VN-xX8"/>
@@ -382,16 +381,16 @@
     </scenes>
     <designables>
         <designable name="79a-OI-dJE">
-            <size key="intrinsicContentSize" width="113" height="34"/>
+            <size key="intrinsicContentSize" width="382" height="39.220703125"/>
         </designable>
         <designable name="DNb-bN-znl">
-            <size key="intrinsicContentSize" width="96.5" height="34"/>
+            <size key="intrinsicContentSize" width="374" height="39.220703125"/>
         </designable>
         <designable name="UK9-4B-MZd">
-            <size key="intrinsicContentSize" width="118.5" height="34"/>
+            <size key="intrinsicContentSize" width="382" height="39.220703125"/>
         </designable>
         <designable name="Urd-IO-gKJ">
-            <size key="intrinsicContentSize" width="83" height="34"/>
+            <size key="intrinsicContentSize" width="374" height="39.220703125"/>
         </designable>
     </designables>
     <resources>
