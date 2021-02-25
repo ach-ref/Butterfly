@@ -1,0 +1,46 @@
+/* 
+  Localizable.strings
+  Butterfly
+
+  Created by Achref Marzouki on 24/02/2021.
+  
+*/
+
+
+// MARK: - General
+"general.done" = "Done";
+"general.cancel" = "Cancel";
+
+
+// MARK: - Orders
+"orders.loading" = "Synchronizing...";
+"orders.title" = "My Orders";
+"orders.lastUpdated" = "Last updated : %@";
+"orders.add.title" = "Add";
+"orders.add.orderNumber" = "Order number";
+"orders.add.orderNumberPlaceholder" = "e.g. 2001";
+"orders.add.deliveryNote" = "Delivery note";
+"orders.add.deliveryNotePlaceholder" = "Any infomation to help us deliver you";
+"orders.add.isActive" = "Order is active?";
+
+
+// MARK: - Order detail
+"orderDetail.quantity" = "Qty : %02d";
+"orderDetail.receivedStatus" = "Received status : %d";
+"orderDetail.noItems" = "No items found";
+"orderDetail.noInvoices" = "No invoices found";
+"orderDetail.itemsSectionTitle" = "Items";
+"orderDetail.invoicesSectionTitle" = "Invoices";
+"orderDetail.addItem.title" = "Add";
+"orderDetail.addItem.productID" = "Product ID";
+"orderDetail.addItem.productIDPlaceholder" = "e.g. 1001";
+"orderDetail.addItem.quantity" = "Quantity";
+"orderDetail.addItem.quantityPlaceholder" = "e.g 10";
+"orderDetail.addItem.isActive" = "Item is active?";
+
+
+// MARK: - Form validation
+"formValidation.required" = "This field is required";
+"formValidation.onlyDigits" = "Should contain only digits";
+"formValidation.greaterThanZero" = "Should be greater than zero";
+"formValidation.orderNumberExists" = "This order number is already taken";

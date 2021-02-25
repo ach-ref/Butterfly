@@ -1,0 +1,45 @@
+/* 
+  Localizable.strings
+  Butterfly
+
+  Created by Achref Marzouki on 24/02/2021.
+  
+*/
+
+// MARK: - General
+"general.done" = "OK";
+"general.cancel" = "Annuler";
+
+
+// MARK: - Orders
+"orders.loading" = "Synchronisation...";
+"orders.title" = "Mes Commandes";
+"orders.lastUpdated" = "Modifiée le : %@";
+"orders.add.title" = "Ajouter";
+"orders.add.orderNumber" = "Numéro de commande";
+"orders.add.orderNumberPlaceholder" = "ex. 2001";
+"orders.add.deliveryNote" = "Info livraison";
+"orders.add.deliveryNotePlaceholder" = "Toute information nous permettant de mieux vous livrer";
+"orders.add.isActive" = "La commande est-elle active?";
+
+
+// MARK: - Order detail
+"orderDetail.quantity" = "Qty : %02d";
+"orderDetail.receivedStatus" = "Statut reçu : %d";
+"orderDetail.noItems" = "Aucun objet trouvé";
+"orderDetail.noInvoices" = "Aucune facture trouvée";
+"orderDetail.itemsSectionTitle" = "Objets";
+"orderDetail.invoicesSectionTitle" = "Factures";
+"orderDetail.addItem.title" = "Ajouter";
+"orderDetail.addItem.productID" = "Identifiant du produit";
+"orderDetail.addItem.productIDPlaceholder" = "ex. 1001";
+"orderDetail.addItem.quantity" = "Quantité";
+"orderDetail.addItem.quantityPlaceholder" = "ex. 10";
+"orderDetail.addItem.isActive" = "L'objet est-il actif?";
+
+
+// MARK: - Form validation
+"formValidation.required" = "Ce champ est requis";
+"formValidation.onlyDigits" = "Doit contenir que des chiffres";
+"formValidation.greaterThanZero" = "Doit être strictement superieur à 0";
+"formValidation.orderNumberExists" = "Ce numéro de commande est déjà existant";
