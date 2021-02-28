@@ -6,7 +6,6 @@
 //
 
 import XCTest
-import SwiftyJSON
 @testable import Butterfly
 
 class ButterflyTests: XCTestCase {
@@ -52,8 +51,7 @@ class ButterflyTests: XCTestCase {
     
     func testInitialDataSync() {
         let initialDataUrl = Bundle(for: type(of: self)).url(forResource: "initial", withExtension: "json")!
-        let stringJson = try? String(contentsOf: initialDataUrl)
-        let jsonObject = JSON(parseJSON: stringJson ?? "").arrayObject as? [Json] ?? []
+        let jsonObject = loadJson(fromPath: initialDataUrl) as? [Json] ?? []
         let context = coreDataManager.storeContainer.newBackgroundContext()
         ButterflyWSManager.shared.synchroniseOrders(from: jsonObject, in: context) {
             // save context
@@ -75,8 +73,7 @@ class ButterflyTests: XCTestCase {
     
     func testNoUpdate() {
         let updatedDataUrl = Bundle(for: type(of: self)).url(forResource: "noupdate", withExtension: "json")!
-        let stringJson = try? String(contentsOf: updatedDataUrl)
-        let jsonObject = JSON(parseJSON: stringJson ?? "").arrayObject as? [Json] ?? []
+        let jsonObject = loadJson(fromPath: updatedDataUrl) as? [Json] ?? []
         let context = coreDataManager.storeContainer.newBackgroundContext()
         ButterflyWSManager.shared.synchroniseOrders(from: jsonObject, in: context) {
             // save context
@@ -94,8 +91,7 @@ class ButterflyTests: XCTestCase {
     
     func testUpdatedRemoteData() {
         let updatedDataUrl = Bundle(for: type(of: self)).url(forResource: "update", withExtension: "json")!
-        let stringJson = try? String(contentsOf: updatedDataUrl)
-        let jsonObject = JSON(parseJSON: stringJson ?? "").arrayObject as? [Json] ?? []
+        let jsonObject = loadJson(fromPath: updatedDataUrl) as? [Json] ?? []
         let context = coreDataManager.storeContainer.newBackgroundContext()
         ButterflyWSManager.shared.synchroniseOrders(from: jsonObject, in: context) {
             // save context
@@ -128,4 +124,15 @@ class ButterflyTests: XCTestCase {
         }
     }
 
+    // MARK: - Helpers
+    
+    private func loadJson(fromPath path: URL) -> Any? {
+        if let data = try? Data(contentsOf: path, options: .mappedIfSafe) {
+            if let jsonResult = try? JSONSerialization.jsonObject(with: data, options: .allowFragments) {
+                return jsonResult
+            }
+        }
+        
+        return nil
+    }
 }

@@ -26,19 +26,8 @@ final class TestCoreDataManager: NSObject {
     lazy var storeContainer: NSPersistentContainer = {
         // container
         let container = NSPersistentContainer(name: self.modelName)
-        
-        // documents url
-        let storeName = "\(self.modelName).sqlite"
-        let documentsDirectoryUrl = try? FileManager.default.url(for: .documentDirectory,
-                                                                 in: .userDomainMask,
-                                                                 appropriateFor: nil,
-                                                                 create: true)
-        guard let persistentStoreURL = documentsDirectoryUrl?.appendingPathComponent(storeName) else {
-            fatalError("Unable to find persistent store in \"Documents\" directory")
-        }
-        
-        // container description - In memory type & custom url
-        let description = NSPersistentStoreDescription(url: persistentStoreURL)
+        // container description - In memory type
+        let description = NSPersistentStoreDescription()
         description.type = NSInMemoryStoreType
         container.persistentStoreDescriptions = [description]
         

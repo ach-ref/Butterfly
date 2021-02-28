@@ -8,9 +8,6 @@ target 'Butterfly' do
   # dynamic frameworks
   use_frameworks!
 
-  # json
-  pod 'SwiftyJSON', '~> 4.0'
-
   # alamofire
   pod 'Alamofire', '~> 5.2'
 
